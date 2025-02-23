@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Topic Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        select, button {
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        #selectedTopic {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Select Your Assignment Topic</h2>
+        <select id="topicDropdown">
+            <option value="HTML Basics">HTML Basics</option>
+            <option value="CSS Styling Techniques">CSS Styling Techniques</option>
+            <option value="JavaScript Interactivity">JavaScript Interactivity</option>
+            <option value="Responsive Web Design">Responsive Web Design</option>
+            <option value="Frontend vs Backend">Frontend vs Backend</option>
+        </select>
+        <br>
+        <button onclick="showTopic()">Confirm Selection</button>
+        <p id="selectedTopic"></p>
+    </div>
+
+    <script>
+        function showTopic() {
+            let topic = document.getElementById("topicDropdown").value;
+            document.getElementById("selectedTopic").innerText = "You selected: " + topic;
+        }
+    </script>
+</body>
+</html>
